@@ -70,7 +70,7 @@ public class CatSearchServlet extends HttpServlet {
                 jsonResponse = callCatApi(apiUrl);
             } else {
                 // Search by breed name
-                String encodedBreed = URLEncoder.encode(breedQuery.trim(), StandardCharsets.UTF_8);
+                String encodedBreed = URLEncoder.encode(breedQuery.trim(), StandardCharsets.UTF_8.toString());
                 String breedsUrl = BREEDS_SEARCH_URL + "?q=" + encodedBreed;
                 String breedsResponse = callCatApi(breedsUrl);
                 
